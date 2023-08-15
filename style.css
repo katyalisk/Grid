@@ -1,0 +1,75 @@
+/* Main */
+body {
+	font-family: "Segoe UI";
+	text-align: center;
+}
+
+svg {
+	display: block;
+	margin: auto;
+}
+
+/* Company Table */
+#gridTable {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(125px, 250px));
+	grid-auto-rows: 35px;
+	grid-auto-flow: row;
+	grid-gap: 2px;
+	
+	justify-content: center;
+	padding-bottom: 50px;
+}
+
+#gridTable > div {
+	border: 2px solid #e6eced;
+	padding-left: 4px;
+}
+
+.titleGrid {
+	grid-column: 1 / 6;
+}
+
+.companyID {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+.companyName {
+	grid-column: 2 / 3;
+}
+
+/* Text */
+#textLine, #textColumn, #textPie {
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+	height: 25px;
+}
+
+/* amCharts 4 vs. SVG */
+#gridComparison {
+	display: grid;
+    grid-template-columns: repeat(4, 200px);
+	grid-auto-rows: 35px;
+	grid-gap: 2px;
+	grid-template-areas:     
+		"a b c d"
+		"e f g h";
+	
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+#gridComparison > div {
+	background-color: #e6eced;
+	border-radius: 5px;
+}
+
+.amChartsTitle {
+	grid-area: a;
+}
+
+.svgTitle {
+	grid-area: e;
+}
